@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "3c7ad947-ec00-4aa9-8462-a95ebc312df9",
+		"name": "Apps Script - Google Sheets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1922617"
+	},
+	"item": [
+		{
+			"name": "Discretionary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 25,\n    \"date\": \"5-Mar\",\n    \"description\": \"Test Discretionary\",\n    \"type\": \"DISCRETIONARY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://script.google.com/macros/s/{{sheetsWebAppId}}/exec",
+					"protocol": "https",
+					"host": [
+						"script",
+						"google",
+						"com"
+					],
+					"path": [
+						"macros",
+						"s",
+						"{{sheetsWebAppId}}",
+						"exec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flexible Expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 25,\n    \"date\": \"5-Mar\",\n    \"description\": \"Test Flexible Expense\",\n    \"type\": \"FLEXIBLE_EXPENSE\",\n    \"expenseCategory\": \"Gas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://script.google.com/macros/s/{{sheetsWebAppId}}/exec",
+					"protocol": "https",
+					"host": [
+						"script",
+						"google",
+						"com"
+					],
+					"path": [
+						"macros",
+						"s",
+						"{{sheetsWebAppId}}",
+						"exec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Discretionary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://script.google.com/macros/s/{{sheetsWebAppId}}/exec?choice=DISCRETIONARY",
+					"protocol": "https",
+					"host": [
+						"script",
+						"google",
+						"com"
+					],
+					"path": [
+						"macros",
+						"s",
+						"{{sheetsWebAppId}}",
+						"exec"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "DISCRETIONARY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flexible Expenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://script.google.com/macros/s/{{sheetsWebAppId}}/exec?choice=FLEXIBLE_EXPENSES",
+					"protocol": "https",
+					"host": [
+						"script",
+						"google",
+						"com"
+					],
+					"path": [
+						"macros",
+						"s",
+						"{{sheetsWebAppId}}",
+						"exec"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "FLEXIBLE_EXPENSES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Both",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://script.google.com/macros/s/{{sheetsWebAppId}}/exec?choice=BOTH",
+					"protocol": "https",
+					"host": [
+						"script",
+						"google",
+						"com"
+					],
+					"path": [
+						"macros",
+						"s",
+						"{{sheetsWebAppId}}",
+						"exec"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "BOTH"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
